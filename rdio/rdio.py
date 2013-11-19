@@ -1280,7 +1280,7 @@ class Api(object):
 def derive_rdio_type_from_data(rdio_object):
     if rdio_types[rdio_object['type']] == 'artist':
         return RdioArtist(rdio_object)
-    if rdio_types[rdio_object['type']] == 'album':
+    if rdio_types[rdio_object['type']] == 'album' or rdio_types[rdio_object['type']] == 'album in collection':
         return RdioAlbum(rdio_object)
     if rdio_types[rdio_object['type']] == 'track':
         return RdioTrack(rdio_object)
